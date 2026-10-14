@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swing Entertainment International | Songs From the Last Century</title>
+  <meta name="description" content="Sophisticated live Soul, Jazz and Swing entertainment for weddings, celebrations, corporate events and destination venues.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B0A0C',
+            panel: '#141218',
+            panel2: '#1B1720',
+            gold: '#C6A15B',
+            goldlight: '#DCC38A',
+            silver: '#B8B5BD',
+            violet: '#6B429C',
+            violetlight: '#8869AF'
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          letterSpacing: { editorial: '.18em' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#0B0A0C; color:#F3F0F8; }
+    .eyebrow { letter-spacing:.22em; text-transform:uppercase; font-size:.66rem; }
+    .gold-rule { height:1px; background:linear-gradient(90deg,transparent,#C6A15B,transparent); }
+    .hero-shade { background:linear-gradient(90deg,rgba(11,10,12,.97) 0%,rgba(11,10,12,.82) 42%,rgba(11,10,12,.18) 100%),linear-gradient(0deg,rgba(11,10,12,.65),transparent 50%); }
+    .photo-placeholder { background:linear-gradient(135deg,#211b29,#111014 58%,#33251b); }
+    .image-label { background:rgba(11,10,12,.72); backdrop-filter:blur(8px); }
+    .outline-gold { border:1px solid rgba(198,161,91,.65); }
+    .card-lift { transition:transform .3s ease,border-color .3s ease; }
+    .card-lift:hover { transform:translateY(-4px); border-color:rgba(198,161,91,.8); }
+    .text-balance { text-wrap:balance; }
+    @media (prefers-reduced-motion: reduce) { html {scroll-behavior:auto} *,*::before,*::after {transition:none!important} }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <!--
+    SWING V2 — CLASSIC EDITORIAL LUXURY
+    Simple image setup: keep image files beside this HTML file (no assets folder required).
+    Replace each photo-XX.jpg placeholder with the actual filename of the selected image.
+    Suggested mapping is based on the client's numbered image sheet:
+      photo-17.jpg / photo-18.jpg = singer close-up
+      photo-19.jpg / photo-24.jpg = audience interaction
+      photo-20.jpg / photo-23.jpg = stage performance
+      photo-27.jpg / photo-28.jpg = wide event atmosphere
+      photo-42.jpg = formal tuxedo portrait
+      photo-1.jpg / photo-6.jpg / photo-7.jpg / photo-9.jpg = European / occasion atmosphere
+    If the filenames differ, change only the src values below.
+  -->
+
+  <div class="border-b border-white/10 bg-[#09080A]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 text-[10px] uppercase tracking-[.18em] text-silver/75 md:px-8">
+      <span>UK & European based artists</span>
+      <span class="hidden sm:block">Soul · Jazz · Swing · Live Entertainment</span>
+      <a href="#booking" class="text-gold hover:text-goldlight">Enquire about an event ↗</a>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/95 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8" aria-label="Main navigation">
+      <a href="#home" class="group flex items-center gap-3">
+        <!-- Replace with your real logo filename; keep it beside this HTML file. -->
+        <img src="logo swing2.png" alt="Swing Entertainment International" 
+        class="h-14 w-auto max-w-[150px] object-contain" 
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="hidden font-display text-2xl leading-none text-white">SWING <span class="block pt-1 font-sans text-[8px] tracking-[.24em] text-gold">ENTERTAINMENT INTERNATIONAL</span></span>
+      </a>
+      <div class="hidden items-center gap-7 text-[11px] uppercase tracking-[.15em] text-white/75 lg:flex">
+        <a class="hover:text-gold" href="#genres">Music</a>
+        <a class="hover:text-gold" href="#artists">Artists</a>
+        <a class="hover:text-gold" href="#occasions">Occasions</a>
+        <a class="hover:text-gold" href="#experience">The Experience</a>
+      </div>
+      <a href="#booking" class="hidden border border-gold/70 px-5 py-3 text-[10px] uppercase tracking-[.17em] text-gold transition hover:bg-gold hover:text-ink sm:inline-flex">Enquire / Book</a>
+      <button id="menuButton" class="inline-flex h-10 w-10 items-center justify-center border border-white/15 text-white lg:hidden" aria-label="Open navigation" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 px-5 py-4 lg:hidden">
+      <div class="flex flex-col gap-4 text-xs uppercase tracking-[.15em] text-white/80">
+        <a href="#genres">Music genres</a><a href="#artists">Artists</a><a href="#occasions">Occasions</a><a href="#experience">The experience</a><a href="#booking" class="text-gold">Enquire / Book</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: editorial composition; use performance photo 27 or 28 as the right-side visual. -->
+    <section id="home" class="relative isolate overflow-hidden border-b border-white/10">
+      <div class="absolute inset-0 -z-20">
+        <img src="hero-b.jpeg" alt="" class="h-full w-full object-cover object-center opacity-70" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/45 to-ink/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/35"></div>
+      </div>
+      <div class="mx-auto grid min-h-[650px] max-w-7xl items-center gap-12 px-5 py-20 md:px-8 lg:grid-cols-[1.02fr_.98fr] lg:py-24">
+        <div class="relative z-10 max-w-2xl">
+          <p class="eyebrow mb-6 flex items-center gap-3 text-gold"><span class="h-px w-10 bg-gold"></span> A world of timeless live music</p>
+          <h1 class="font-display text-balance text-6xl font-medium leading-[.91] tracking-[-.035em] text-white sm:text-7xl md:text-8xl">
+            The songs<br>that <em class="font-normal text-goldlight">stay</em><br>with us.
+          </h1>
+          <p class="mt-7 max-w-lg font-display text-2xl italic text-white/80 md:text-3xl">Songs From the Last Century</p>
+          <p class="mt-5 max-w-lg text-sm leading-7 text-white/65">Exceptional Soul, Jazz and Swing performers for the moments worth remembering — from intimate celebrations to unforgettable events.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a href="#artists" class="inline-flex items-center gap-3 bg-gold px-6 py-4 text-[10px] font-semibold uppercase tracking-[.16em] text-ink transition hover:bg-goldlight">Discover our artists <span aria-hidden="true">↗</span></a>
+            <a href="#booking" class="inline-flex items-center gap-3 border border-white/25 px-6 py-4 text-[10px] uppercase tracking-[.16em] text-white transition hover:border-gold hover:text-gold">Plan your event</a>
+          </div>
+          <div class="mt-12 flex items-center gap-5 border-t border-white/15 pt-5 text-[10px] uppercase tracking-[.14em] text-white/50">
+            <span>Curated talent</span><span class="h-1 w-1 rounded-full bg-gold"></span><span>UK & Europe</span><span class="h-1 w-1 rounded-full bg-gold"></span><span>Made for the moment</span>
+          </div>
+        </div>
+        <div class="relative mx-auto w-full max-w-xl lg:ml-auto">
+          <div class="absolute -right-3 -top-3 h-24 w-24 border-r border-t border-gold/70"></div>
+          <div class="relative aspect-[4/5] max-h-[560px] overflow-hidden border border-white/15 bg-panel">
+            <img src="inzet-hero.jpeg" alt="Singer performing live on stage" class="h-full w-full object-cover object-center" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
+            <div class="photo-placeholder hidden h-full w-full items-end p-6">
+              <div><p class="eyebrow text-gold">Live performance image</p><p class="mt-2 font-display text-3xl text-white">A voice. A moment. A memory.</p><p class="mt-2 text-xs text-white/55">Replace with photo 17 or 18</p></div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 flex items-end justify-between p-5 md:p-7">
+              <div><p class="eyebrow text-gold">The live experience</p><p class="mt-2 font-display text-3xl text-white">Classic sound.<br>Modern stage.</p></div>
+              <span class="mb-1 grid h-11 w-11 place-items-center rounded-full border border-white/45 text-white" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="absolute -top-5 -left-5 hidden w-40 border border-gold/40 bg-ink p-4 md:block">
+            <p class="font-display text-3xl text-gold">01</p><p class="mt-1 text-[9px] uppercase tracking-[.17em] text-white/60">Music with character</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"></div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-[.7fr_1.3fr]">
+      <div>
+        <p class="eyebrow text-gold">Our philosophy</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight text-white md:text-5xl">Some music<br><em class="text-goldlight">never ages.</em></h2>
+      </div>
+      <div class="max-w-3xl lg:pt-2">
+        <p class="font-display text-2xl leading-snug text-white/85 md:text-3xl">A familiar melody can turn a gathering into a memory.</p>
+        <p class="mt-5 max-w-2xl text-sm leading-7 text-white/60">Swing Entertainment International brings together distinctive vocalists, musicians, jazz bands and DJs, selected for their artistry, professionalism and ability to set the tone for an occasion.</p>
+        <div class="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-5">
+          <div><p class="font-display text-2xl text-gold">Soul</p><p class="mt-1 text-[9px] uppercase tracking-[.12em] text-white/45">Feel every note</p></div>
+          <div><p class="font-display text-2xl text-gold">Jazz</p><p class="mt-1 text-[9px] uppercase tracking-[.12em] text-white/45">Effortless style</p></div>
+          <div><p class="font-display text-2xl text-gold">Swing</p><p class="mt-1 text-[9px] uppercase tracking-[.12em] text-white/45">Timeless charm</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENRES -->
+    <section id="genres" class="border-y border-white/10 bg-[#100E12] py-20 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div><p class="eyebrow text-gold">Find your sound</p><h2 class="mt-3 font-display text-5xl text-white md:text-6xl">Music with a mood.</h2></div>
+          <p class="max-w-md text-sm leading-6 text-white/55">Three timeless genres, interpreted by artists with their own style, sound and stage presence.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="card-lift group relative min-h-[390px] overflow-hidden border border-white/10 bg-panel">
+            <img src="article-1.jpeg" alt="Soul vocalist performing" class="absolute inset-0 h-full w-full object-cover opacity-65 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative flex min-h-[390px] flex-col justify-end p-6 md:p-7"><p class="eyebrow text-gold">01 / Soul</p><h3 class="mt-2 font-display text-4xl text-white">Soul</h3><p class="mt-2 max-w-xs text-xs leading-6 text-white/70">Warm vocals, emotional depth and songs that bring people together.</p><a href="#artists" class="mt-5 text-[10px] uppercase tracking-[.17em] text-gold">Explore artists ↗</a></div>
+          </article>
+          <article class="card-lift group relative min-h-[390px] overflow-hidden border border-white/10 bg-panel">
+            <img src="article-2.jpeg" alt="Jazz band on stage" class="absolute inset-0 h-full w-full object-cover opacity-65 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative flex min-h-[390px] flex-col justify-end p-6 md:p-7"><p class="eyebrow text-gold">02 / Jazz</p><h3 class="mt-2 font-display text-4xl text-white">Jazz</h3><p class="mt-2 max-w-xs text-xs leading-6 text-white/70">Sophisticated musicianship for relaxed receptions and refined evenings.</p><a href="#artists" class="mt-5 text-[10px] uppercase tracking-[.17em] text-gold">Explore artists ↗</a></div>
+          </article>
+          <article class="card-lift group relative min-h-[390px] overflow-hidden border border-white/10 bg-panel">
+            <img src="article3.jpeg" alt="Swing vocalist performing on stage" class="absolute inset-0 h-full w-full object-cover opacity-65 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent"></div>
+            <div class="relative flex min-h-[390px] flex-col justify-end p-6 md:p-7"><p class="eyebrow text-gold">03 / Swing</p><h3 class="mt-2 font-display text-4xl text-white">Swing</h3><p class="mt-2 max-w-xs text-xs leading-6 text-white/70">The golden-era repertoire, delivered with polish, charm and energy.</p><a href="#artists" class="mt-5 text-[10px] uppercase tracking-[.17em] text-gold">Explore artists ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTIST -->
+    <section id="artists" class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div><p class="eyebrow text-gold">A closer introduction</p><h2 class="mt-3 font-display text-5xl text-white md:text-6xl">Featured artist.</h2></div>
+        <p class="max-w-sm text-sm leading-6 text-white/55">Meet one of the distinctive performers available through Swing Entertainment International.</p>
+      </div>
+      <div class="grid overflow-hidden border border-white/12 bg-panel md:grid-cols-[.9fr_1.1fr]">
+        <div class="relative min-h-[440px] bg-[#17131A]">
+          <img src="featured.jpeg" alt="Featured artist in formal evening wear" class="absolute inset-0 h-full w-full object-cover object-top" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
+          <div class="photo-placeholder hidden h-full min-h-[440px] items-end p-8"><div><p class="eyebrow text-gold">Featured artist portrait</p><p class="mt-3 font-display text-3xl text-white">Replace with photo 42</p></div></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+          <span class="absolute left-5 top-5 border border-white/25 bg-ink/60 px-3 py-2 text-[9px] uppercase tracking-[.18em] text-white">Featured</span>
+        </div>
+        <div class="flex flex-col justify-center p-7 md:p-10 lg:p-14">
+          <p class="eyebrow text-gold">Soul · Jazz · Swing</p>
+          <h3 class="mt-4 font-display text-5xl leading-[.95] text-white md:text-6xl">Alexander<br><em class="text-goldlight">James</em></h3>
+          <p class="mt-6 max-w-xl text-sm leading-7 text-white/65">A polished vocalist with a repertoire inspired by the great voices of the last century, bringing timeless favourites and contemporary stagecraft to special occasions.</p>
+          <div class="mt-7 grid gap-5 border-y border-white/10 py-5 sm:grid-cols-2">
+            <div><p class="eyebrow text-white/40">Signature style</p><p class="mt-2 font-display text-2xl text-white">Classic vocal elegance</p></div>
+            <div><p class="eyebrow text-white/40">Performance rates</p><p class="mt-2 font-display text-2xl text-gold">From £950</p></div>
+          </div>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#booking" class="bg-gold px-5 py-4 text-[10px] font-semibold uppercase tracking-[.16em] text-ink hover:bg-goldlight">Enquire about Alexander ↗</a>
+            <a href="#gallery" class="border border-white/20 px-5 py-4 text-[10px] uppercase tracking-[.16em] text-white hover:border-gold hover:text-gold">View performance</a>
+          </div>
+          <p class="mt-5 text-[10px] leading-5 text-white/35">Artist profile and starting rate shown as supplied in the existing concept; confirm details before publication.</p>
+        </div>
+      </div>
+      <div class="mt-5 grid grid-cols-3 gap-3">
+        <div class="relative aspect-[4/3] overflow-hidden border border-white/10"><img src="live.jpg" alt="Live vocal performance" class="h-full w-full object-cover" onerror="this.style.display='none'"><span class="image-label absolute bottom-2 left-2 px-2 py-1 text-[8px] uppercase tracking-[.14em] text-gold">Live vocals</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden border border-white/10"><img src="closeup.jpeg" alt="Singer performing close-up" class="h-full w-full object-cover" onerror="this.style.display='none'"><span class="image-label absolute bottom-2 left-2 px-2 py-1 text-[8px] uppercase tracking-[.14em] text-gold">On stage</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden border border-white/10"><img src="atmosphare.jpeg" alt="Audience enjoying a live event" class="h-full w-full object-cover" onerror="this.style.display='none'"><span class="image-label absolute bottom-2 left-2 px-2 py-1 text-[8px] uppercase tracking-[.14em] text-gold">The atmosphere</span></div>
+      </div>
+    </section>
+
+    <!-- ROSTER -->
+    <section class="border-y border-white/10 bg-[#100E12] py-20 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div><p class="eyebrow text-gold">The roster</p><h2 class="mt-3 font-display text-5xl text-white md:text-6xl">Distinctive artists.<br><em class="text-goldlight">One trusted source.</em></h2></div>
+          <p class="max-w-md text-sm leading-6 text-white/55">From solo vocalists to bands and international DJs, find a sound that suits your audience and your occasion.</p>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card-lift border border-white/10 bg-panel p-4"><div class="aspect-[4/5] overflow-hidden bg-[#201A25]"><img src="soul.jpg" alt="Vocalist performing" class="h-full w-full object-cover" onerror="this.style.display='none'"></div><p class="eyebrow mt-5 text-gold">Soul / Contemporary</p><h3 class="mt-2 font-display text-2xl text-white">Soul vocalists</h3><p class="mt-2 text-xs leading-5 text-white/50">Expressive voices and a modern take on timeless favourites.</p></article>
+          <article class="card-lift border border-white/10 bg-panel p-4"><div class="aspect-[4/5] overflow-hidden bg-[#201A25]"><img src="jazz ansembles.jpg" alt="Jazz band performance" class="h-full w-full object-cover" onerror="this.style.display='none'"></div><p class="eyebrow mt-5 text-gold">Jazz / Instrumental</p><h3 class="mt-2 font-display text-2xl text-white">Jazz ensembles</h3><p class="mt-2 text-xs leading-5 text-white/50">Refined live music for receptions, dinners and elegant evenings.</p></article>
+          <article class="card-lift border border-white/10 bg-panel p-4"><div class="aspect-[4/5] overflow-hidden bg-[#201A25]"><img src="swing singer.jpg" alt="Swing singer on stage" class="h-full w-full object-cover" onerror="this.style.display='none'"></div><p class="eyebrow mt-5 text-gold">Swing / Classics</p><h3 class="mt-2 font-display text-2xl text-white">Swing singers</h3><p class="mt-2 text-xs leading-5 text-white/50">Big melodies, familiar standards and effortless sophistication.</p></article>
+          <article class="card-lift border border-white/10 bg-panel p-4"><div class="aspect-[4/5] overflow-hidden bg-[#201A25]"><img src="djs.jpg" alt="Live event and stage" class="h-full w-full object-cover" onerror="this.style.display='none'"></div><p class="eyebrow mt-5 text-gold">Events / Atmosphere</p><h3 class="mt-2 font-display text-2xl text-white">DJs & live bands</h3><p class="mt-2 text-xs leading-5 text-white/50">Flexible entertainment to shape the energy of the room.</p></article>
+        </div>
+        <div class="mt-8 flex justify-center"><a href="#booking" class="border border-gold/60 px-6 py-4 text-[10px] uppercase tracking-[.17em] text-gold transition hover:bg-gold hover:text-ink">Ask for the full artist roster ↗</a></div>
+      </div>
+    </section>
+
+    <!-- OCCASIONS -->
+    <section id="occasions" class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+      <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
+        <div>
+          <p class="eyebrow text-gold">Made for your occasion</p>
+          <h2 class="mt-4 font-display text-5xl leading-[.98] text-white md:text-6xl">The right sound<br>changes <em class="text-goldlight">everything.</em></h2>
+          <p class="mt-6 max-w-md text-sm leading-7 text-white/55">From a first dance to a gala dinner, we help you find entertainment that feels right for the room, the audience and the moment.</p>
+          <a href="#booking" class="mt-7 inline-flex items-center gap-3 text-[10px] uppercase tracking-[.17em] text-gold">Discuss your event <span>↗</span></a>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="group relative min-h-[210px] overflow-hidden border border-white/10"><img src="wedding.jpeg" alt="European riverside setting" class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div><div class="absolute bottom-0 p-5"><p class="eyebrow text-gold">01</p><h3 class="mt-1 font-display text-2xl text-white">Weddings & anniversaries</h3></div></div>
+          <div class="group relative mt-8 min-h-[210px] overflow-hidden border border-white/10"><img src="event.jpeg" alt="Elegant restaurant interior" class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div><div class="absolute bottom-0 p-5"><p class="eyebrow text-gold">02</p><h3 class="mt-1 font-display text-2xl text-white">Corporate events</h3></div></div>
+          <div class="group relative min-h-[210px] overflow-hidden border border-white/10"><img src="resorts.jpeg" alt="European street and venue atmosphere" class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div><div class="absolute bottom-0 p-5"><p class="eyebrow text-gold">03</p><h3 class="mt-1 font-display text-2xl text-white">Hotels & resorts</h3></div></div>
+          <div class="group relative mt-8 min-h-[210px] overflow-hidden border border-white/10"><img src="seasonal.jpeg" alt="Golden hour destination atmosphere" class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div><div class="absolute bottom-0 p-5"><p class="eyebrow text-gold">04</p><h3 class="mt-1 font-display text-2xl text-white">Seasonal celebrations</h3></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE GALLERY -->
+    <section id="gallery" class="border-y border-white/10 bg-[#100E12] py-20 md:py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div><p class="eyebrow text-gold">A glimpse of the stage</p><h2 class="mt-3 font-display text-5xl text-white md:text-6xl">Hear the room come alive.</h2></div>
+          <p class="max-w-md text-sm leading-6 text-white/55">Real performers. Live audiences. The atmosphere that turns a performance into an experience.</p>
+        </div>
+        <div class="mt-10 grid auto-rows-[150px] grid-cols-2 gap-3 md:auto-rows-[190px] md:grid-cols-4">
+          <div class="relative col-span-2 row-span-2 overflow-hidden border border-white/10 md:row-span-2"><img src="performance-live.webp" alt="Wide live performance with audience" class="h-full w-full object-cover" onerror="this.style.display='none'"><div class="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent"></div><span class="absolute bottom-4 left-4 text-[9px] uppercase tracking-[.18em] text-gold">Live, together</span></div>
+          <div class="relative overflow-hidden border border-white/10"><img src="coseup.jpg" alt="Singer close-up" class="h-full w-full object-cover" onerror="this.style.display='none'"></div>
+          <div class="relative overflow-hidden border border-white/10"><img src="audience.PNG" alt="Audience enjoying music" class="h-full w-full object-cover" onerror="this.style.display='none'"></div>
+          <div class="relative overflow-hidden border border-white/10"><img src="classic.PNG" alt="Stage lighting and singer" class="h-full w-full object-cover" onerror="this.style.display='none'"></div>
+          <div class="relative overflow-hidden border border-white/10"><img src="singer&audience.PNG" alt="Audience interaction" class="h-full w-full object-cover" onerror="this.style.display='none'"></div>
+        </div>
+        <div class="mt-5 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center">
+          <p class="text-xs text-white/45">Photography and performance footage can be added to each artist profile.</p>
+          <a href="#booking" class="text-[10px] uppercase tracking-[.17em] text-gold hover:text-goldlight">Request artist videos ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYLIST / TESTIMONIAL -->
+    <section id="experience" class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 md:py-28 lg:grid-cols-2">
+      <div>
+        <p class="eyebrow text-gold">A timeless repertoire</p>
+        <h2 class="mt-4 font-display text-5xl leading-tight text-white md:text-6xl">Songs you know.<br><em class="text-goldlight">Moments you keep.</em></h2>
+        <p class="mt-5 max-w-lg text-sm leading-7 text-white/55">Every artist brings a different interpretation to the classics. Sample repertoire can be tailored to the style, audience and atmosphere of your event.</p>
+        <div class="mt-8 border-t border-white/10">
+          <div class="flex items-center justify-between border-b border-white/10 py-4"><div><p class="text-sm text-white">The Great American Songbook</p><p class="mt-1 text-[10px] text-white/40">Classic standards · Swing</p></div><span class="font-display text-xl text-gold">01</span></div>
+          <div class="flex items-center justify-between border-b border-white/10 py-4"><div><p class="text-sm text-white">Soul Through the Decades</p><p class="mt-1 text-[10px] text-white/40">Soul favourites · Vocal</p></div><span class="font-display text-xl text-gold">02</span></div>
+          <div class="flex items-center justify-between border-b border-white/10 py-4"><div><p class="text-sm text-white">Jazz for the Evening</p><p class="mt-1 text-[10px] text-white/40">Dinner · Reception · Lounge</p></div><span class="font-display text-xl text-gold">03</span></div>
+        </div>
+        <p class="mt-4 text-[10px] leading-5 text-white/35">Illustrative playlist categories. Confirm individual song titles with each artist before publishing.</p>
+      </div>
+      <div class="relative flex flex-col justify-between border border-gold/35 bg-panel p-7 md:p-10">
+        <div class="absolute right-7 top-5 font-display text-8xl leading-none text-gold/15">“</div>
+        <div><p class="eyebrow text-gold">The difference is in the detail</p><blockquote class="mt-8 font-display text-3xl leading-snug text-white md:text-4xl">“Music has a way of making an occasion feel entirely its own.”</blockquote><div class="gold-rule mt-8 w-20"></div><p class="mt-5 text-xs leading-6 text-white/55">Choose the right voice, the right repertoire and the right atmosphere — with support from first enquiry to final encore.</p></div>
+        <div class="mt-12 border-t border-white/10 pt-5"><p class="eyebrow text-white/40">Client testimonials</p><p class="mt-2 text-xs leading-5 text-white/45">Replace this editorial statement with an approved, genuine client quote when available.</p></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="relative overflow-hidden border-y border-gold/25 bg-[#15111A]">
+      <div class="absolute -right-20 -top-32 h-96 w-96 rounded-full border border-gold/10"></div><div class="absolute -right-8 -top-20 h-72 w-72 rounded-full border border-violet/20"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:px-8 md:py-24 lg:grid-cols-[1fr_.8fr] lg:items-end">
+        <div><p class="eyebrow text-gold">Start a conversation</p><h2 class="mt-4 max-w-2xl font-display text-5xl leading-[.98] text-white md:text-7xl">Make your next event <em class="text-goldlight">sing.</em></h2><p class="mt-6 max-w-xl text-sm leading-7 text-white/60">Tell us a little about your occasion. We’ll help you explore artists, performance styles and availability.</p></div>
+        <div class="border border-white/12 bg-ink/70 p-6 md:p-8">
+          <p class="eyebrow text-gold">Booking enquiries</p>
+          <p class="mt-3 font-display text-3xl text-white">Let’s find your sound.</p>
+          <p class="mt-3 text-xs leading-6 text-white/50">Share your event date, location and the atmosphere you have in mind.</p>
+          <!-- Replace # with the real booking/contact URL or email link. -->
+          <a href="mailto:bookings@swingentertainmentinternational.com?subject=Swing%20Entertainment%20Booking%20Enquiry" class="mt-6 flex items-center justify-between bg-gold px-5 py-4 text-[10px] font-semibold uppercase tracking-[.16em] text-ink transition hover:bg-goldlight"><span>Make an enquiry</span><span>↗</span></a>
+          <p class="mt-4 text-[9px] leading-5 text-white/30">Confirm the correct booking email/address before publishing this prototype.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink">
+    <div class="mx-auto max-w-7xl px-5 py-10 md:px-8">
+      <div class="flex flex-col justify-between gap-8 border-b border-white/10 pb-8 md:flex-row md:items-end">
+        <a href="#home" class="group flex items-center gap-3">
+        <!-- Replace with your real logo filename; keep it beside this HTML file. -->
+        <img src="logo swing.png" alt="Swing Entertainment International" 
+        class="h-40 w-auto max-w-[440px] object-contain" 
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="hidden font-display text-2xl leading-none text-white">SWING <span class="block pt-1 font-sans text-[8px] tracking-[.24em] text-gold">ENTERTAINMENT INTERNATIONAL</span></span>
+      </a>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-[9px] uppercase tracking-[.15em] text-white/45"><a href="#genres" class="hover:text-gold">Music genres</a><a href="#artists" class="hover:text-gold">Artists</a><a href="#occasions" class="hover:text-gold">Occasions</a><a href="#booking" class="hover:text-gold">Booking</a></div>
+      </div>
+      <div class="flex flex-col justify-between gap-2 pt-5 text-[9px] tracking-[.08em] text-white/30 sm:flex-row"><span>© <span id="year"></span> Swing Entertainment International</span><span>Classic sound. Considered style. Unforgettable occasions.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
